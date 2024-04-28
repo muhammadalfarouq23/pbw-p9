@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- External -->
+    <script src="css/main.js"></script>
+   <script>
+    // kode js
+    // alert('Sugeng Rawuh');
+    let nama ="mail";
+    let nomor = 2 ;
+
+    // debuging
+    console.log(nomor)
+    
+    let mahasiswa = {
+        nama : "jirjat",
+        kelas : "RPL"
+    }
+
+    console.log(mahasiswa.nama)
+    console.log(mahasiswa.kelas)
+    let input =prompt("Asma Panjenengan: ")
+
+    function tambah(a,b){
+        let input1 = document.getElementById("a1").value;
+        let input2 = document.getElementById("a2").value;
+        let hasil = parseInt (input1) + parseInt (input2);
+        alert(hasil);
+    }
+
+    function kurang(a,b){
+        let input1 = document.getElementById("a1").value;
+        let input2 = document.getElementById("a2").value;
+        let hasil = parseInt(input1) - parseInt (input2);
+        alert(hasil);
+    }
+
+    function bagi(a,b){
+        let input1 = document.getElementById("a1").value;
+        let input2 = document.getElementById("a2").value;
+        let hasil = parseInt(input1) / parseInt (input2);
+        alert(hasil);
+    }
+   </script>
+</head>
+<body>
+<input type="text" name="angka1" id="a1">
+<input type="text" name="angka2" id="a2">
+<input type="button" value=" + " onclick="tambah()"> 
+<input type="button" value=" - " onclick="kurang()">   
+<input type="button" value=" / " onclick="bagi()">
+
+</body>
+</html>

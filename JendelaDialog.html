@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jendela Dialog Basic</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Menampilkan dialog ketika tombol "Buka Dialog" diklik
+            $("#bukaDialog").click(function() {
+                $("#dialog").show();
+            });
+
+            // Menutup dialog ketika tombol "X" atau "Tutup" diklik
+            $(".dialog-close, .dialog-button").click(function() {
+                $("#dialog").hide();
+            });
+        });
+    </script>
+    <style>
+        #dialog {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #9506e3;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .dialog-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .dialog-header h3 {
+            margin: 0;
+        }
+
+        .dialog-close {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .dialog-content {
+            margin-bottom: 10px;
+        }
+
+        .dialog-footer {
+            text-align: right;
+        }
+
+        .dialog-button {
+            padding: 5px 10px;
+            border: 1 px solid #000000;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button id="bukaDialog">Buka Dialog</button>
+
+    <div id="dialog">
+        <div class="dialog-header">
+            <h3>Basic Dialog</h3>
+            <button class="dialog-close">X</button>
+        </div>
+        <div class="dialog-content">
+            <p>Ini merupakan jendela basic dialog dengan jquery</p>
+        </div>
+        <div class="dialog-footer">
+            <button class="dialog-button">Tutup</button>
+        </div>
+    </div>
+</body>
+</html>
